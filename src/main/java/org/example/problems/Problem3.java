@@ -11,8 +11,8 @@ public class Problem3 {
     }
 
     /**
-     * Eficient way of implemnating
-     * @return
+     * Efficient way to implement
+     * @return Singleton Object
      */
     public static Problem3 getInstance(){
 
