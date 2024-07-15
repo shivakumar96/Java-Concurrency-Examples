@@ -1,4 +1,4 @@
-package org.example.implemantion.basic;
+package org.example.implementation.basic;
 
 import java.util.LinkedList;
 import java.util.Queue;

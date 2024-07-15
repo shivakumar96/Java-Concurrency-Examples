@@ -1,4 +1,4 @@
-package org.example.implemantion.basic;
+package org.example.implementation.basic;
 
 public class Synchronized {
     int num = 0;

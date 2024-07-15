@@ -1,4 +1,4 @@
-package org.example.implemantion.basic;
+package org.example.implementation.basic;
 
 /**
  * Interrupts are co-operative mechanisms to indicate stop signals to a thread.
