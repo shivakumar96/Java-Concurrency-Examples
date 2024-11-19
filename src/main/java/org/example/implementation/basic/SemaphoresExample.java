@@ -1,5 +1,6 @@
 package org.example.implementation.basic;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
@@ -41,15 +42,18 @@ public class SemaphoresExample {
         while (true){
             try {
                 readSem.acquire();
-                System.out.println(queue.poll());
+                System.out.println("Consumed :"+queue.poll());
                 writeSem.release();
 
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+
             }
         }
 
     };
+
+    // single consumer and multiple producer
 
     public static void main(String[] args) {
         SemaphoresExample semaphoresExample = new SemaphoresExample(5);

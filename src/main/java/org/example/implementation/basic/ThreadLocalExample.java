@@ -11,18 +11,18 @@ class MyInt{
 }
 
 public class ThreadLocalExample {
-
-    static ThreadLocal<MyInt> counter = new ThreadLocal<>(){
-        @Override
-        protected MyInt initialValue(){
-            return  new MyInt(0);
-        }
-
-        @Override
-        public MyInt get(){
-            return  super.get();
-        }
-    };
+    static ThreadLocal<MyInt> counter = ThreadLocal.withInitial(()-> new MyInt(0));
+//    new ThreadLocal <>(){
+//        @Override
+//        protected MyInt initialValue(){
+//            return  new MyInt(0);
+//        }
+//
+//        @Override
+//        public MyInt get(){
+//            return  super.get();
+//        }
+//    };
 
     public static void main(String[] args) {
         ExecutorService service = Executors.newFixedThreadPool(5);

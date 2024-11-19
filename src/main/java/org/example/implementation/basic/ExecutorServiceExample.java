@@ -32,6 +32,8 @@ public class ExecutorServiceExample {
         service3.schedule(()->{System.out.println("Thread 1");},6, TimeUnit.SECONDS);
         service3.schedule(()->{System.out.println("Thread 2");},4, TimeUnit.SECONDS);
         service3.scheduleAtFixedRate(()->{System.out.println("Thread 3");},1, 500,TimeUnit.MILLISECONDS);
+        service3.scheduleWithFixedDelay(()->{System.out.println("Thread 3");},1, 500,TimeUnit.MILLISECONDS);
+
 
 
         // creates 100 tasks
