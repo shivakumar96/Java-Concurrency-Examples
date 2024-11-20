@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class ReadWriteLockExample {
     public  static int val =0;
     public static void main(String[] args) throws InterruptedException {
-        // allows multiple reads and and only one write simultaneously
+        // allows multiple reads and only one write simultaneously
         ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();
         ReentrantReadWriteLock.ReadLock readLock = rwLock.readLock();
         ReentrantReadWriteLock.WriteLock writeLock = rwLock.writeLock();
